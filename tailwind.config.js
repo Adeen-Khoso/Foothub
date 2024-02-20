@@ -10,7 +10,11 @@ module.exports = {
       primary_bg:'#DDE6ED',
       hover_text_color:'color: rgb(148 163 184);'
     },
-    extend: {},
+    extend: {
+      backgroundImage:{
+        'colorfull-bg' : "url('/Assets/background.jpg')"
+      }
+    },
   },
   plugins: [],
 }
