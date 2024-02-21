@@ -17,11 +17,12 @@
 
 </head>
 
-<body class="bg-primary_bg">
+<body class="overflow-y-auto overflow-x-hidden">
+
     <header class="">
 
         <!-- navbar starts here -->
-        <nav class="flex flex-row justify-between items-center py-3 px-7 sm:py-5 sm:px-16 bg-primary_dark sm:bg-white sm:backdrop-blur-sm sm:bg-opacity-5" id="nav">
+        <nav class="flex flex-row absolute w-screen top-0 justify-between items-center py-3 px-7 sm:py-5 sm:px-16 bg-primary_dark sm:bg-opacity-0" id="nav">
 
             <!-- menu button -->
             <button type="button" id="menu-btn" class="sm:hidden  inline-flex relative items-center justify-center rounded-md p-2 text-primary_bg hover:bg-slate-100 hover:text-primary_light focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary_light" aria-controls="mobile-menu" aria-expanded="false">
@@ -44,17 +45,18 @@
 
             <!-- navigation links -->
             <div class="hidden sm:flex bg-white rounded-3xl w-3/5 items-center justify-center py-2 gap-16 ">
-                <a class=" text-primary_dark font-montserrat uppercase text-sm font-medium hover:text-opacity-70" href="index.html">home</a>
-                <a class=" text-primary_dark font-montserrat uppercase text-sm font-medium hover:text-opacity-70" href="index.html#about-section">about us</a>
-                <a class=" text-primary_dark font-montserrat uppercase text-sm font-medium hover:text-opacity-70" href="index.html#contact-section">contact</a>
-                <a class=" text-primary_dark font-montserrat uppercase text-sm font-medium hover:text-opacity-70" href="index.html#featured-section">featured</a>
+                <a class=" text-primary_dark font-montserrat uppercase text-xs font-medium hover:text-opacity-70" href="index.html">home</a>
+                <a class=" text-primary_dark font-montserrat uppercase text-xs font-medium hover:text-opacity-70" href="index.html#about-section">about us</a>
+                <a class=" text-primary_dark font-montserrat uppercase text-xs font-medium hover:text-opacity-70" href="index.html#contact-section">contact</a>
+                <a class=" text-primary_dark font-montserrat uppercase text-xs font-medium hover:text-opacity-70" href="index.html#featured-section">featured</a>
             </div>
             
             <!-- leagues cta -->
             <div class="hidden sm:flex bg-primary_dark rounded-3xl py-2 w-32 justify-center items-center">
-                <a href="" class="text-white font-montserrat uppercase text-sm font-medium hover:text-primary_bg">leagues</a>
+                <a href="" class="text-white font-montserrat uppercase text-xs font-medium hover:text-primary_bg">leagues</a>
             </div>
 
+            <!-- menu for mobile nav -->
             <div id="menu" class="sm:hidden flex-col  text-left absolute px-6 pt-4 rounded-b-xl top-16 left-0 w-full h-52 bg-primary_dark z-10 hidden">
                 <!-- mobile menu content here -->
                 <div class="py-2 px-4">
@@ -62,12 +64,33 @@
                     <a class="block mt-2 text-primary_bg font-poppins capitalize text-base font-medium hover:text-opacity-60 hover:text-slate-100" href="index.html#about-section">about us</a>
                     <a class="block mt-2 text-primary_bg font-poppins capitalize text-base font-medium hover:text-opacity-60 hover:text-slate-100" href="index.html#contact-section">contact</a>
                     <a class="block mt-2 text-primary_bg font-poppins capitalize text-base font-medium hover:text-opacity-60 hover:text-slate-100" href="index.html#featured-section">featured</a>
-                </divlg
+                </div>
             </div>
 
         </nav>
         <!-- navbar ends here -->
-          
+        
+        <!-- hero section starts here -->
+        <div class="flex flex-col items-center justify-center h-screen w-screen py-20 px-16 bg-aurora bg-no-repeat ">
+
+            <!-- text container -->
+            <div class="flex flex-col justify-center items-center text-center ">
+                <!-- heading -->
+                <div  class="font-poppins text-6xl font-semibold capitalize text-primary_dark leading-normal">
+                    know your team's <span class="text-primary_light relative ">standings <img src="Assets/line.png" class="w-56 absolute left-3/4 -mt-7 -ml-32" alt=""> </span> Anywhere, Anytime
+                </div>
+
+                <!-- description -->
+                <div class="text-lg font-poppins font-light text-primary_light">
+                    Premier League, La Liga, Serie A and more leagues around the globe. Track the progress accross every major league !
+                </div>
+            </div>
+
+            <!-- image container -->
+            <div></div>
+        </div>
+        <!-- hero section ends here -->
+
     </header>
 </body>
 </html>

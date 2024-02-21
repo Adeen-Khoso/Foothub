@@ -12,7 +12,7 @@ module.exports = {
     },
     extend: {
       backgroundImage:{
-        'colorfull-bg' : "url('/Assets/background.jpg')"
+        'aurora' : "url('/Assets/background.png')"
       }
     },
   },
