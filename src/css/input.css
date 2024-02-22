@@ -3,26 +3,40 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* custom fonts */
 .font-montserrat {
   font-family: "Montserrat", sans-serif;
 }
 .font-poppins {
   font-family: "Poppins", sans-serif;
 }
-.cubic-bezier {
-  transition-timing-function: cubic-bezier(0.1, 0.7, 1, 0.1);
-}
 
+/* scrollbar stylings */
 ::-webkit-scrollbar {
   width: 6px; 
   cursor: pointer;
 }
-
 ::-webkit-scrollbar-track {
   background-color: #2f3c46; 
 }
-
 ::-webkit-scrollbar-thumb {
   background-color: #688bbe;
   border-radius: 4px;
+}
+
+/* utility classes */
+.scrolled{
+  z-index: 1200;
+  background-color: rgb(255, 255, 255);
+  backdrop-filter: blur(4px);
+}
+.transition-bg-color{
+  transition: background-color 0.1s ease-in-out;
+}
+.border-b-light{
+  border-bottom-color:#91B0DA ;
+}
+.eighty-percent-height{
+  height: 80vh;
 }

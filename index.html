@@ -22,7 +22,7 @@
     <header class="">
 
         <!-- navbar starts here -->
-        <nav class="flex flex-row absolute w-screen top-0 justify-between items-center py-3 px-7 sm:py-5 sm:px-16 bg-primary_dark sm:bg-opacity-0" id="nav">
+        <nav class="flex flex-row fixed w-screen top-0 justify-between items-center py-3 px-7 sm:py-5 sm:px-16 bg-primary_dark sm:bg-opacity-0 transition-bg-color " id="nav">
 
             <!-- menu button -->
             <button type="button" id="menu-btn" class="sm:hidden  inline-flex relative items-center justify-center rounded-md p-2 text-primary_bg hover:bg-slate-100 hover:text-primary_light focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary_light" aria-controls="mobile-menu" aria-expanded="false">
@@ -71,10 +71,10 @@
         <!-- navbar ends here -->
         
         <!-- hero section starts here -->
-        <div class="flex flex-col items-center justify-center h-screen w-screen py-20 px-16 bg-aurora bg-no-repeat ">
+        <div class="flex flex-col items-center justify-center h-screen w-screen py-20 px-16 bg-aurora bg-no-repeat bg-cover bg-center" id="hero-section">
 
             <!-- text container -->
-            <div class="flex flex-col justify-center items-center text-center mt-16">
+            <div class="flex flex-col justify-center items-center text-center mt-16" id="text-container">
                 <!-- heading -->
                 <div  class="font-poppins text-6xl font-semibold capitalize text-primary_dark leading-normal">
                     know your team's <span class="text-primary_light relative ">standings <img src="Assets/line.png" class="w-56 absolute left-3/4 -mt-7 -ml-32" alt=""> </span> Anywhere, Anytime
@@ -109,8 +109,34 @@
 
     <main>
         <!-- featured-section starts here -->
-        <div id="featured-section" class="w-screen h-screen bg-white">
-            hi
+        <div id="featured-section" class="flex justify-between items-center w-screen eighty-percent-height bg-white py-5 ">
+            
+            <!-- text container -->
+            <div class="flex flex-col justify-center gap-6 pl-16 -mt-16">
+                
+                <!-- heading -->
+                <div class="flex flex-col gap-1">
+                    <p class="text-primary_light text-base uppercase font-normal font-poppins" >featured</p>
+                    <div class="border-b-2 border-b-light w-80"></div>
+                </div>
+
+                <!-- text/img data -->
+                <div class="flex justify-center gap-3 w-2/3">
+                    <!-- img -->
+                    <div class="w-48 -ml-6"><img src="Assets/premierLeagueLogo.png" alt=""></div>
+                    <!-- text -->
+                    <div class="flex flex-col text-left justify-start gap-3 ">
+                        <h1 class="font-poppins text-3xl font-semibold text-primary_dark leading-snug">Premier league 2023/2024 Season</h1>
+                        <p class="font-poppins text-base font-normal text-primary_dark w-80">Stay up-to-date with the latest standings in the premier league!</p>
+                        <a href="#" class="flex justify-center w-28 py-2 bg-primary_light text-white font-poppins font-normal mt-2 hover:text-primary_bg">Table</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- image container -->
+            <div class="w-2/5">
+                <img src="Assets/trentCold.jpg" alt="SUII">
+            </div>
         </div>
     </main>
 </body>
