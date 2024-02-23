@@ -37,6 +37,12 @@
 .border-b-light{
   border-bottom-color:#91B0DA ;
 }
+.text-light-color{
+  color: #758eb1e1;
+}
+.text-dull{
+  color: rgba(255, 255, 255, 0.397);
+}
 
 /* height classes */
 .eighty-percent-height{
@@ -47,4 +53,7 @@
 }
 .thirtyfive-percent-height{
   height:35vh;
+}
+.fifty-percent-height{
+  height:50vh;
 }
