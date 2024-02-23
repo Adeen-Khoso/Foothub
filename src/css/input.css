@@ -37,10 +37,14 @@
 .border-b-light{
   border-bottom-color:#91B0DA ;
 }
+
+/* height classes */
 .eighty-percent-height{
   height: 80vh;
 }
-
 .ninety-percent-height{
   height: 90vh;
+}
+.thirtyfive-percent-height{
+  height:35vh;
 }
