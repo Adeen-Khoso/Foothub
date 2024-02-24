@@ -17,7 +17,7 @@
 
 </head>
 
-<body class="overflow-y-auto overflow-x-hidden cubic-bezier scroll scrollbar-thumb-gray-500 scrollbar-track-gray-200 ">
+<body class="overflow-y-hidden overflow-hidden  scroll scrollbar-thumb-gray-500 scrollbar-track-gray-200 ">
 
     <header class="">
 
@@ -25,7 +25,7 @@
         <nav class=" flex flex-row fixed w-screen top-0 justify-between items-center py-3 px-7 sm:py-5 sm:px-16 bg-primary_dark sm:bg-opacity-0 transition-bg-color " id="nav">
 
             <!-- menu button for mobile-->
-            <button type="button" id="menu-btn" class="sm:hidden  inline-flex relative items-center justify-center rounded-md p-2 text-primary_bg hover:bg-slate-100 hover:text-primary_light focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary_light" aria-controls="mobile-menu" aria-expanded="false">
+            <button type="button" id="menu-btn" class="sm:hidden  inline-flex relative items-center justify-center rounded-md  text-primary_bg hover:bg-slate-100 hover:text-primary_light focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary_light" aria-controls="mobile-menu" aria-expanded="false">
                 <span class="absolute -inset-0.5"></span>
                 <span class="sr-only">Open main menu</span>
 
@@ -40,11 +40,11 @@
             <!-- menu button -->
 
             <!-- branding logo -->
-            <img src="Assets/logo.svg" alt="" class=" hidden sm:block sm:w-24 xl:w-1">
+            <img src="Assets/logo.svg" alt="" class=" hidden sm:block sm:w-24 " id="logo">
             <img src="Assets/logo-light.svg" alt="" class="w-16 block sm:hidden">
 
             <!-- navigation links -->
-            <div class="hidden sm:flex bg-white rounded-3xl w-3/5 items-center justify-center py-2 gap-16">
+            <div class="hidden sm:flex bg-white rounded-3xl w-3/5 items-center justify-center py-2 gap-16 " id="nav-island">
                 <a class=" text-primary_dark font-montserrat uppercase text-xs font-medium hover:text-opacity-70" href="index.html">home</a>
                 <a class=" text-primary_dark font-montserrat uppercase text-xs font-medium hover:text-opacity-70" href="index.html#about-section">about us</a>
                 <a class=" text-primary_dark font-montserrat uppercase text-xs font-medium hover:text-opacity-70" href="index.html#contact-section">contact</a>
@@ -52,12 +52,12 @@
             </div>
             
             <!-- leagues cta -->
-            <div class="hidden sm:flex bg-primary_dark rounded-3xl py-2 w-32 justify-center items-center">
+            <div class="hidden sm:flex bg-primary_dark rounded-3xl py-2 w-32 justify-center items-center" id="leagues-cta">
                 <a href="" class="text-white font-montserrat uppercase text-xs font-medium hover:text-primary_bg">leagues</a>
             </div>
 
             <!-- menu for mobile nav -->
-            <div id="menu" class="sm:hidden flex-col  text-left absolute px-6 pt-4 rounded-b-xl top-16 left-0 w-full h-52 bg-primary_dark z-10 hidden">
+            <div id="menu" class="sm:hidden flex-col  text-left absolute px-6 pt-4 rounded-b-xl top-12 left-0 w-screen h-52 bg-primary_dark z-10 hidden">
                 <!-- mobile menu content here -->
                 <div class="py-2 px-4">
                     <a class="block mt-2 text-primary_bg font-poppins capitalize text-base font-medium hover:text-opacity-60 hover:text-slate-100" href="index.html">home</a>
@@ -71,10 +71,10 @@
         <!-- navbar ends here -->
         
         <!-- hero section starts here -->
-        <div class="flex flex-col items-center justify-center h-screen w-screen py-20 px-16 bg-aurora bg-no-repeat bg-cover bg-center" id="hero-section">
+        <div class="sm:flex hidden flex-col items-center justify-center h-screen w-screen py-20 px-16 bg-aurora bg-no-repeat bg-cover bg-center" id="hero-section">
 
             <!-- text container -->
-            <div class="flex flex-col justify-center items-center text-center mt-16" id="text-container">
+            <div class="sm:flex flex-col justify-center items-center text-center mt-16 hidden " id="text-container">
                 <!-- heading -->
                 <div  class="font-poppins text-6xl font-semibold capitalize text-primary_dark leading-normal">
                     know your team's <span class="text-primary_light relative ">standings <img src="Assets/line.png" class="w-56 absolute left-3/4 -mt-7 -ml-32" alt=""> </span> Anywhere, Anytime
@@ -87,7 +87,7 @@
             </div>
 
             <!-- image container -->
-            <div class="flex flex-row gap-2 mt-10">
+            <div class=" sm:flex flex-wrap flex-row gap-2 mt-10 sm:flex-nowrap hidden" id="image-container">
                 <div class="card w-56 h-40 rounded-2xl overflow-hidden">
                     <img src="Assets/haaland.jpg" class="w-full h-full object-cover" alt="Image 1">
                 </div>
@@ -110,19 +110,19 @@
     <main>
 
         <!-- featured-section starts here -->
-        <div id="featured-section" class="flex justify-between items-center w-screen eighty-percent-height bg-white py-5 ">
+        <div id="featured-section" class="sm:flex hidden justify-between items-center w-screen eighty-percent-height bg-white py-5 ">
             
             <!-- text container -->
-            <div class="flex flex-col justify-center gap-6 pl-16 -mt-16">
+            <div class="flex flex-col justify-center gap-6 pl-16 -mt-16" id="f-text" >
                 
                 <!-- heading -->
-                <div class="flex flex-col gap-1">
+                <div class="flex flex-col gap-1 f-heading">
                     <p class="text-primary_light text-base uppercase font-normal font-poppins" >featured</p>
                     <div class="border-b-2 border-b-light w-80"></div>
                 </div>
 
                 <!-- text/img data -->
-                <div class="flex justify-center gap-3 w-2/3">
+                <div class="flex justify-center gap-3 w-32 sm:w-2/3 f-content">
                     <!-- img -->
                     <div class="w-48 -ml-6"><img src="Assets/premierLeagueLogo.png" alt=""></div>
                     <!-- text -->
@@ -135,14 +135,14 @@
             </div>
 
             <!-- image container -->
-            <div class="w-2/5">
+            <div class="w-2/5 trent hidden sm:block">
                 <img src="Assets/trentCold.jpg" alt="SUII">
             </div>
         </div>
         <!-- featured section ends here -->
 
         <!-- about us section starts here -->
-        <div id="about-section" class="flex flex-col justify-center items-center px-16 py-2 gap-14 ninety-percent-height bg-primary_bg ">
+        <div id="about-section" class="sm:flex hidden flex-col justify-center items-center px-16 py-2 gap-14 ninety-percent-height bg-primary_bg ">
             <!-- heading div -->
             <div class="flex flex-col justify-center items-center gap-2">
                 <div class="flex flex-col gap-1 items-center">
@@ -155,10 +155,10 @@
             <!-- content div -->
             <div class="flex justify-center gap-10 items-center ">
                 <!-- img -->
-                <img src="Assets/debruyne.jpg" alt="" class="w-2/5">
+                <img src="Assets/debruyne.jpg" alt="" class="w-2/5" id="debruyne">
 
                 <!-- text div -->
-                <div class="flex flex-col justify-center gap-3 w-2/5">
+                <div class="flex flex-col justify-center gap-3 w-2/5" id="about-text">
                     <h1 class="font-poppins font-medium text-primary_dark text-xl">Stay updated about the Footballing World</h1>
                     <p class="font-poppins font-normal text-primary_dark text-base">Get in the game with our comprehensive platform delivering real-time team rankings and standings from top football leagues worldwide. Stay ahead of the curve with the latest updates at your fingertips. Whether you're a die-hard fan or a casual observer, we've got you covered with all the latest insights and developments in the beautiful game.</p>
                     <a href="index.html#contact-section" class="flex justify-center w-28 py-2 bg-primary_dark text-primary_bg font-poppins font-normal mt-2 hover:text-primary_bg">Contact</a>
@@ -168,13 +168,13 @@
         <!-- about us section ends here -->
 
         <!-- contact section starts here -->
-        <div class="flex flex-col justify-center items-center bg-primary_dark thirtyfive-percent-height" id="contact-section">
+        <div class="sm:flex hidden flex-col justify-center items-center bg-primary_dark thirtyfive-percent-height" id="contact-section">
 
             <!-- heading -->
-            <h1 class="text-3xl font-bold uppercase font-poppins text-primary_bg mb-7">Contact</h1>
+            <h1 class="text-3xl font-bold uppercase font-poppins text-primary_bg mb-7 contact-heading">Contact</h1>
 
             <!-- content -->
-            <div class="flex justify-center items-center ">
+            <div class="flex justify-center items-center contact-container">
 
                 <div class="flex justify-center mr-48">
                     <img src="Assets/map.png" class="w-16 mr-2" alt="">
@@ -196,13 +196,13 @@
         <!-- contact section ends here -->
 
         <!-- quote section starts here-->
-        <div class="flex justify-center items-center gap-8 thirtyfive-percent-height bg-primary_bg">
+        <div class="sm:flex hidden justify-center items-center gap-8 thirtyfive-percent-height bg-primary_bg quote-section ">
 
             <!-- img -->
-            <img src="Assets/quote.png" class="w-28" alt="">
+            <img src="Assets/quote.png" class="w-28 quote-img" alt="">
 
             <!-- content -->
-            <div class="flex flex-col justify-center gap-2 w-80 ">
+            <div class="flex flex-col justify-center gap-2 w-80 quote-text">
                 <h1 class="font-semibold font-poppins text-2xl text-primary_dark">Football is the Poetry of Motion</h1>
                 <p class="font-poppins text-base text-primary_light">-Anon</p>
             </div>
@@ -211,10 +211,10 @@
         <!-- quote section ends here-->
 
         <!-- footer starts here -->
-        <div class="flex flex-col justify-center bg-primary_dark w-screen fifty-percent-height px-16 py-5 gap-16">
+        <div class="sm:flex hidden flex-col justify-center bg-primary_dark w-screen fifty-percent-height px-16 py-5 gap-16 footer">
 
             <!-- first section -->
-            <div class="flex justify-between">
+            <div class="flex justify-between footer-1">
                 <img src="Assets/logo-light.svg" alt="" class="w-24" >
                 <div class="flex items-center justify-center gap-2">
                     <a href="https://www.instagram.com/adeen.developer"><img src="Assets/instagram.svg" alt="" class="w-6"></a>
@@ -225,7 +225,7 @@
             </div>
 
             <!-- second section -->
-            <div class="flex flex-row justify-between ">
+            <div class="flex flex-row justify-between footer-2 ">
                 <div class="flex flex-col ">
                     <p class="font-poppins text-base uppercase font-normal text-primary_bg">website</p>
                     <div class="font-poppins text-base capitalize text-light-color font-normal mt-1 flex flex-col">
