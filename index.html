@@ -78,7 +78,7 @@
         <div class="flex flex-col sm:items-center justify-center py-3 px-7 h-screen w-screen sm:py-20 sm:px-16 bg-aurora bg-no-repeat bg-cover sm:bg-center" id="hero-section">
 
             <!-- text container -->
-            <div class="flex flex-col justify-center items-center text-left sm:text-center mt-2 sm:mt-16 pr-14" id="text-container">
+            <div class="flex flex-col justify-center items-center text-left sm:text-center mt-2 sm:pr-0 sm:mt-16 pr-14" id="text-container">
                 <!-- heading -->
                 <div  class="font-poppins text-4xl leading-tight text-left sm:text-center sm:text-6xl font-semibold capitalize text-primary_dark sm:leading-normal z-50 ">
                     know your team's <span class="text-primary_light relative ">standings <img src="Assets/line.png" class="w-28 sm:w-56 absolute left-full -z-20 sm:left-3/4 -mt-3 sm:-mt-7 -ml-32" alt=""> </span> Anywhere, Anytime
@@ -95,7 +95,7 @@
                 <div class="card w-44 h-32 sm:w-56 sm:h-40  rounded-2xl overflow-hidden">
                     <img src="Assets/haaland.jpg" class="w-full h-full object-cover" alt="Image 1">
                 </div>
-                <div class="card w-44 h-32 ml-24 -mt-5 sm:w-56 sm:h-40 rounded-2xl overflow-hidden">
+                <div class="card w-44 h-32 ml-24 sm:ml-0 -mt-5 sm:mt-5 sm:w-56 sm:h-40 rounded-2xl overflow-hidden">
                     <img src="Assets/bellingham.jpg" class="w-full h-full object-cover" alt="Image 2">
                 </div>
                 <div class="card -mt-4 w-56 h-40 rounded-2xl overflow-hidden hidden sm:block">
@@ -126,12 +126,12 @@
                 </div>
 
                 <!-- text/img data -->
-                <div class="flex justify-center sm:w-2/3 f-content">
+                <div class="flex justify-center sm:w-2/3 md:w-auto f-content">
                     <!-- img -->
                     <div class=" w-36 sm:w-52 -ml-3 sm:-ml-6"><img src="Assets/premierLeagueLogo.png" alt=""></div>
                     <!-- text -->
-                    <div class="flex w-56 flex-col text-left justify-start gap-1.5 sm:gap-3 ">
-                        <h1 class="font-poppins text-xl sm:text-3xl font-semibold text-primary_dark leading-snug">Premier league 2023/2024 Season</h1>
+                    <div class="flex sm:w-auto w-56 flex-col text-left justify-start gap-1.5 sm:gap-3 ">
+                        <h1 class="font-poppins text-xl sm:text-3xl sm:w-2/3 font-semibold text-primary_dark leading-snug ">Premier league 2023/2024 Season</h1>
                         <p class="font-poppins sm:text-base font-normal text-primary_dark sm:w-80">Stay up-to-date with the latest standings in the premier league!</p>
                         <a href="#" class="flex justify-center  w-20 py-1 sm:w-28 sm:py-2 bg-primary_light text-white font-poppins font-normal mt-1 sm:mt-2 hover:text-primary_bg">Table</a>
                     </div>
@@ -139,14 +139,14 @@
             </div>
 
             <!-- image container -->
-            <div class="sm:w-2/5 w-3/4 trent flex self-end">
+            <div class="  w-3/4  sm:block trent flex self-end sm:self-center">
                 <img src="Assets/trentCold.jpg" alt="SUII">
             </div>
         </div>
         <!-- featured section ends here -->
 
         <!-- about us section starts here -->
-        <div id="about-section" class="flex flex-col justify-center items-center px-7 sm:px-16 py-2 sm:gap-14 gap-5 ninety-percent-height bg-primary_bg ">
+        <div id="about-section" class="flex flex-col justify-center items-center  px-7 sm:px-16 py-2 sm:gap-14 gap-5 ninety-percent-height bg-primary_bg ">
             <!-- heading div -->
             <div class="flex flex-col justify-center items-center gap-2">
                 <div class="flex flex-col gap-1 items-center">
@@ -162,7 +162,7 @@
                 <img src="Assets/debruyne.jpg" alt="" class="hidden sm:block w-2/5" id="debruyne">
 
                 <!-- text div -->
-                <div class="flex flex-col sm:justify-center items-center sm:items-left gap-3 sm:w-2/5" id="about-text">
+                <div class="flex flex-col sm:justify-center items-center sm:items-start gap-3 sm:w-2/5" id="about-text">
                     <h1 class="font-poppins font-medium text-primary_dark text-xl text-center sm:text-left">Stay updated about the Footballing World</h1>
                     <p class="font-poppins font-normal text-primary_dark text-base text-center sm:text-left">Get in the game with our comprehensive platform delivering real-time team rankings and standings from top football leagues worldwide. Stay ahead of the curve with the latest updates at your fingertips. Whether you're a die-hard fan or a casual observer, we've got you covered with all the latest insights and developments in the beautiful game.</p>
                     <a href="index.html#contact-section" class="flex justify-center w-28 py-2 bg-primary_dark text-primary_bg font-poppins font-normal mt-2 hover:text-primary_bg">Contact</a>
@@ -172,28 +172,25 @@
         <!-- about us section ends here -->
 
         <!-- contact section starts here -->
-        <div class="flex flex-col justify-center items-center bg-primary_dark thirtyfive-percent-height" id="contact-section">
+        <div class="flex flex-col justify-center items-center bg-primary_dark fourty-percent-height sm:thirtyfive-percent-height" id="contact-section">
 
             <!-- heading -->
-            <h1 class="text-3xl font-bold uppercase font-poppins text-white mb-7 contact-heading">Contact</h1>
+            <h1 class="text-3xl font-bold uppercase font-poppins text-white mb-14 sm:mb-12 contact-heading">Contact</h1>
 
             <!-- content -->
-            <div class="flex flex-col sm:flex-row contact-container gap-3">
+            <div class="flex flex-col sm:flex-row contact-container gap-3 sm:gap-40">
 
-                <div class="flex gap-3">
-                    <!-- <img src="Assets/map.png" class="sm:w-16 w-14 sm:mr-2" alt=""> -->
+                <div class="flex gap-3 items-center">
                     <i class="fa fa-map-pin text-primary_bg" style="font-size: 28px;"></i>
-                    <p class="flex flex-col text-dull font-poppins font-normal uppercase text-sm ">located in <span class="font-bold text-primary_bg text-sm -mt-0.5">pakistan</span></p>
+                    <p class="flex flex-col text-dull font-poppins font-normal uppercase text-sm  ">located in <span class="font-bold text-primary_bg text-sm -mt-0.5">pakistan</span></p>
                 </div>
 
-                <div class="flex gap-3" >
-                    <!-- <img src="Assets/mail.png" class="sm:w-10 w h-10 mr-4  mt-1" alt=""> -->
+                <div class="flex gap-3 items-center" >
                     <i class="fa fa-envelope text-primary_bg" style="font-size: 28px;"></i>
                     <p class="flex flex-col text-dull font-poppins font-normal uppercase text-sm ">email <span class="font-bold text-sm lowercase text-primary_bg -mt-0.5">@gmail</span></p>
                 </div>
 
-                <div class="flex  gap-3">
-                    <!-- <img src="Assets/instagram.png" class="sm:w-16 sm:mr-2" alt=""> -->
+                <div class="flex gap-3 items-center">
                     <i class="fa fa-instagram text-primary_bg" style="font-size: 28px;"></i>
                     <a href="https://www.instagram.com/adeen.developer" class="flex flex-col text-dull font-poppins font-normal uppercase text-sm ">instagram <span class=" text-primary_bg font-bold text-sm -mt-0.5 lowercase">adeen.developer</span></a>
                 </div>
@@ -218,7 +215,7 @@
         <!-- quote section ends here-->
 
         <!-- footer starts here -->
-        <div class="flex flex-col justify-center bg-primary_dark w-screen fifty-percent-height px-7 py-5 gap-12 sm:gap-16 footer">
+        <div class="flex flex-col justify-center bg-primary_dark w-screen fifty-percent-height px-7 py-5 sm:px-16 gap-12 sm:gap-16 footer">
 
             <!-- first section -->
             <div class="flex justify-between footer-1">
