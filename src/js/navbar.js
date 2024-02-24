@@ -3,13 +3,20 @@ const menu = document.getElementById('menu');
 const nav = document.getElementById('nav');
 const heroSection = document.getElementById('hero-section');
 const textContainer = document.getElementById('text-container');
+const links = document.querySelectorAll('.links');
 
 let width = screen.width;
 
-menuBtn.addEventListener('click', function() {
-    menu.classList.toggle('hidden');
-    menu.classList.toggle('flex');
-});
+links.forEach((link)=>{
+  link.addEventListener('click',menuFunc)
+})
+
+menuBtn.addEventListener('click', menuFunc)
+
+function menuFunc() {
+  menu.classList.toggle('hidden');
+  menu.classList.toggle('flex');
+};
 
 window.addEventListener('scroll', function() {
   if(width > 700){
