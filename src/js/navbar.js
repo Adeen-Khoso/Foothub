@@ -4,12 +4,15 @@ const nav = document.getElementById('nav');
 const heroSection = document.getElementById('hero-section');
 const textContainer = document.getElementById('text-container');
 
+let width = screen.width;
+
 menuBtn.addEventListener('click', function() {
     menu.classList.toggle('hidden');
     menu.classList.toggle('flex');
 });
 
 window.addEventListener('scroll', function() {
+  if(width > 700){
     let scrolledValue = 70;
     let scrolled = window.scrollY > scrolledValue;
   
@@ -18,5 +21,6 @@ window.addEventListener('scroll', function() {
     } else {
       nav.classList.remove('scrolled');
     }
-  });
+  }
+});
   
