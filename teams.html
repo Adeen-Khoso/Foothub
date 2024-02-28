@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Table | Foothub</title>
+    
+    <!-- favicon -->
+    <link rel="shortcut icon" href="Assets/favicon.png" type="image/x-icon">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="src/css/output.css">
+
+    <!-- javascript -->
+    <script defer src="src/js/navbar.js"></script>
+    <!-- <script defer src="src/js/leagues.js"></script> -->
+    <script defer src="src/js/teams.js"></script>
+    
+</head>
+<body class="overflow-y-auto overflow-x-hidden bg-primary_bg">
+
+    <header>
+    
+        <!-- navbar starts here -->
+        <nav class="z-index-1200 flex flex-row fixed w-screen top-0 justify-between items-center py-3 px-7 sm:py-5 sm:px-16 bg-primary_dark sm:bg-opacity-0 transition-bg-color " id="nav">
+            <!-- menu button for mobile-->
+            <button type="button" id="menu-btn" class="sm:hidden  inline-flex relative items-center justify-center rounded-md  text-primary_bg hover:bg-slate-100 hover:text-primary_light focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary_light" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="absolute -inset-0.5"></span>
+                <span class="sr-only">Open main menu</span>
+
+                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+
+                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <!-- menu button -->
+
+            <!-- branding logo -->
+            <img src="Assets/logo.svg" alt="" class=" hidden sm:block sm:w-24 " id="logo">
+            <img src="Assets/logo-light.svg" alt="" class="w-16 block sm:hidden">
+
+            <!-- navigation links -->
+            <div class="hidden sm:flex bg-white rounded-3xl w-3/5 items-center justify-center py-2 gap-16 " id="nav-island">
+                <a class=" text-primary_dark font-montserrat uppercase text-xs font-medium hover:text-opacity-70" href="index.html">home</a>
+                <a class=" text-primary_dark font-montserrat uppercase text-xs font-medium hover:text-opacity-70" href="index.html#about-section">about us</a>
+                <a class=" text-primary_dark font-montserrat uppercase text-xs font-medium hover:text-opacity-70" href="index.html#contact-section">contact</a>
+                <a class=" text-primary_dark font-montserrat uppercase text-xs font-medium hover:text-opacity-70" href="index.html#featured-section">featured</a>
+            </div>
+            
+            <!-- leagues cta -->
+            <div class="hidden sm:flex bg-primary_dark rounded-3xl py-2 w-32 justify-center items-center" id="leagues-cta">
+                <a href="leagues.html" class="text-white font-montserrat uppercase text-xs font-medium hover:text-primary_bg">leagues</a>
+            </div>
+
+            <!-- menu for mobile nav -->
+            <div id="menu" class="sm:hidden flex-col justify-center text-left absolute px-6 rounded-b-xl top-12 left-0 w-screen h-64  bg-primary_dark z-10 hidden">
+                <!-- mobile menu content here -->
+                <div class="py-2 px-4">
+                    <a class="block text-primary_bg font-poppins capitalize text-base font-medium hover:text-opacity-60 hover:text-slate-100 links" href="index.html">home</a>
+                    <a class="block mt-2 text-primary_bg font-poppins capitalize text-base font-medium hover:text-opacity-60 hover:text-slate-100 links" href="index.html#about-section">about us</a>
+                    <a class="block mt-2 text-primary_bg font-poppins capitalize text-base font-medium hover:text-opacity-60 hover:text-slate-100 links" href="index.html#contact-section">contact</a>
+                    <a class="block mt-2 text-primary_bg font-poppins capitalize text-base font-medium hover:text-opacity-60 hover:text-slate-100 links" href="index.html#featured-section">featured</a>
+                    <a class="block mt-2 text-primary_bg font-poppins capitalize text-base font-medium hover:text-opacity-60 hover:text-slate-100 links" href="index.html#">leagues</a>
+                </div>
+            </div>
+
+        </nav>
+        <!-- navbar ends here -->
+    </header>
+
+    
+    <!-- main content starts here -->
+    <main class="flex flex-col justify-center items-center px-7 py-28 sm:py-32 sm:px-16 gap-7 sm:gap-10 h-auto">
+
+        <!-- teams table -->
+        <div class="bg-white w-full sm:w-11/12 sm:px-16 px-6 py-3 pb-10 sm:py-6 sm:pb-10 flex flex-col justify-start  rounded-2xl h-auto gap-5 sm:gap-9" id="teams-table">
+
+            <!-- heading container -->
+            <div class="flex flex-row justify-between">
+                <!-- heading -->
+                <div class="font-montserrat font-extrabold sm:text-3xl text-primary_dark">
+                    Premier league
+                </div>
+
+                <!-- dropdown -->
+                <div class="flex flex-col items-center justify-center" >
+                    <div class="font-poppins text-sm font-medium  text-primary_dark bg-lightest px-4 py-1.5 rounded-sm flex items-center justify-center gap-1 cursor-pointer" id="dropdown">
+                        2023/2024 <span class="text-xs" id="dropdown-span">▼</span>
+                    </div>
+                    <div class="hidden absolute mt-44 bg-lightest overflow-y-scroll overflow-x-hidden px-4 py-1.5 rounded-sm h-32 text-primary_dark font-poppins font-medium text-sm" id="dropdown-div">
+                        <p class=" hidden hover:rounded-2xl hover:bg-primary_bg ">2021/2022</p>
+                        <p>2021/2022</p>
+                        <p>2021/2022</p>
+                        <p>2021/2022</p>
+                        <p>2021/2022</p>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- items-container -->
+            <div id="item-container">
+                
+                <!-- item -->
+                <div class="flex gap-7 justify-between border-b-2 border-b-light py-2 px-1 sm:px-2 sm:gap-12">
+                    <div class="flex items-center justify-center gap-4 sm:gap-12">
+                        <h1 class="font-poppins font-semibold text-lg text-primary_light">1</h1>
+                        <div class="flex flex-row justify-center items-center gap-2 sm:gap-4">
+                            <img src="Assets/liverpool.png" alt="" class="w-5 sm:w-7">
+                            <h1 class="font-poppins font-semibold capitalize text-xl sm:text-2xl text-primary_dark ">Liv</h1>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-5 sm:gap-20 sm:flex-nowrap">
+                        <div class="font-poppins text-primary_dark">
+                            GP <span class="font-poppins font-semibold text-primary_lightd">10</span> 
+                        </div>
+                        <div class="font-poppins text-primary_dark">
+                            W <span class="font-poppins font-semibold text-primary_light">8</span> 
+                        </div>
+                        <div class="font-poppins text-primary_dark">
+                            L <span class="font-poppins font-semibold text-primary_light">1</span> 
+                        </div>
+                        <div class="font-poppins text-primary_dark">
+                            D <span class="font-poppins font-semibold text-primary_light">1</span> 
+                        </div>
+                        <div class="font-poppins text-primary_dark">
+                            P <span class="font-poppins font-semibold text-primary_light">22</span> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>    
+</body>
+</html>

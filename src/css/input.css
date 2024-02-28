@@ -14,6 +14,7 @@
 
 /* scrollbar stylings */
 ::-webkit-scrollbar {
+  margin: 100px;
   width: 6px; 
   cursor: pointer;
 }
@@ -40,8 +41,14 @@
 .border-b-light{
   border-bottom-color:#91B0DA ;
 }
+.bg-lightest{
+  background-color: #A6BDDC;
+}
 .text-light-color{
   color: #758eb1e1;
+}
+.bg-light-color{
+  background-color: #758eb1e1;
 }
 .text-dull{
   color: rgba(166, 196, 216, 0.589);
@@ -95,8 +102,11 @@
   .f-heading{
     margin-top: -90px;
   }
+  .f-dis{
+    width: 100px;
+  }
   .f-content{
-    margin-left: -20px;
+    margin-left: 10px;
     margin-top: 20px;
     scale: 1.2;
     padding-left: 66px;

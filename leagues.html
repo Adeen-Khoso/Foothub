@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Leagues | Foothub</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="Assets/favicon.png" type="image/x-icon">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="src/css/output.css">
+
+    <!-- javascript -->
+    <script defer src="src/js/navbar.js"></script>
+    <script defer src="src/js/leagues.js"></script>
+    
+</head>
+<body class="overflow-y-auto overflow-x-hidden bg-primary_bg">
+    <header>
+        <!-- navbar starts here -->
+        <nav class="z-index-1200 flex flex-row fixed w-screen top-0 justify-between items-center py-3 px-7 sm:py-5 sm:px-16 bg-primary_dark sm:bg-opacity-0 transition-bg-color " id="nav">
+            <!-- menu button for mobile-->
+            <button type="button" id="menu-btn" class="sm:hidden  inline-flex relative items-center justify-center rounded-md  text-primary_bg hover:bg-slate-100 hover:text-primary_light focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary_light" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="absolute -inset-0.5"></span>
+                <span class="sr-only">Open main menu</span>
+
+                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+
+                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <!-- menu button -->
+
+            <!-- branding logo -->
+            <img src="Assets/logo.svg" alt="" class=" hidden sm:block sm:w-24 " id="logo">
+            <img src="Assets/logo-light.svg" alt="" class="w-16 block sm:hidden">
+
+            <!-- navigation links -->
+            <div class="hidden sm:flex bg-white rounded-3xl w-3/5 items-center justify-center py-2 gap-16 " id="nav-island">
+                <a class=" text-primary_dark font-montserrat uppercase text-xs font-medium hover:text-opacity-70" href="index.html">home</a>
+                <a class=" text-primary_dark font-montserrat uppercase text-xs font-medium hover:text-opacity-70" href="index.html#about-section">about us</a>
+                <a class=" text-primary_dark font-montserrat uppercase text-xs font-medium hover:text-opacity-70" href="index.html#contact-section">contact</a>
+                <a class=" text-primary_dark font-montserrat uppercase text-xs font-medium hover:text-opacity-70" href="index.html#featured-section">featured</a>
+            </div>
+            
+            <!-- leagues cta -->
+            <div class="hidden sm:flex bg-primary_dark rounded-3xl py-2 w-32 justify-center items-center" id="leagues-cta">
+                <a href="" class="text-white font-montserrat uppercase text-xs font-medium hover:text-primary_bg">leagues</a>
+            </div>
+
+            <!-- menu for mobile nav -->
+            <div id="menu" class="sm:hidden flex-col justify-center text-left absolute px-6 rounded-b-xl top-12 left-0 w-screen h-64  bg-primary_dark z-10 hidden">
+                <!-- mobile menu content here -->
+                <div class="py-2 px-4">
+                    <a class="block text-primary_bg font-poppins capitalize text-base font-medium hover:text-opacity-60 hover:text-slate-100 links" href="index.html">home</a>
+                    <a class="block mt-2 text-primary_bg font-poppins capitalize text-base font-medium hover:text-opacity-60 hover:text-slate-100 links" href="index.html#about-section">about us</a>
+                    <a class="block mt-2 text-primary_bg font-poppins capitalize text-base font-medium hover:text-opacity-60 hover:text-slate-100 links" href="index.html#contact-section">contact</a>
+                    <a class="block mt-2 text-primary_bg font-poppins capitalize text-base font-medium hover:text-opacity-60 hover:text-slate-100 links" href="index.html#featured-section">featured</a>
+                    <a class="block mt-2 text-primary_bg font-poppins capitalize text-base font-medium hover:text-opacity-60 hover:text-slate-100 links" href="index.html#">leagues</a>
+                </div>
+            </div>
+
+        </nav>
+        <!-- navbar ends here -->
+    </header>
+
+    <!-- main content starts here -->
+    <main class="flex flex-col justify-center items-center px-12 py-28 sm:py-32 sm:px-16 gap-7 sm:gap-10 h-auto">
+        
+        <!-- heading -->
+        <div class="flex flex-col justify-center items-center sm:gap-1.5">
+            <h1 class="font-montserrat font-extrabold uppercase text-2xl sm:text-5xl text-primary_dark">football leagues</h1>
+            <p class="font-poppins font-normal text-base sm:text-xl capitalize text-primary_light">top competitions</p>
+        </div>
+
+        <!-- leagues table -->
+        <div class="bg-white w-full sm:w-2/3 sm:px-28 px-6 py-3 pb-10 sm:py-6 sm:pb-10 flex flex-col justify-start items-center rounded-2xl h-auto gap-2 sm:gap-4" id="leagues-table">
+            <!-- ...data from api -->
+        </div>
+    </main>
+</body>
+</html>
