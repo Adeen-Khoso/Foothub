@@ -7,20 +7,27 @@ dropdown.addEventListener('click', ()=>{
     dropdownDiv.classList.toggle('hidden');
 })
 
+// default_url/parent_url
+const defaultUrl = "https://api-football-standings.azharimm.dev/leagues";
+const itemId = location.search.split("=")[1];
 
-// fetching data from server
-fetch('https://api-football-standings.azharimm.dev/leagues').then(response => response.json())
+fetch(defaultUrl).then(response => response.json())
 .then(details => leagueId = details.data.forEach(element => {
     gettingId(element.id)
 }))
 
 function gettingId(id){
     const leagueId = id;
-    const itemId = location.search.split("=")[1];
-    
-    if(itemId == leagueId){
-        fetch(`https://api-football-standings.azharimm.dev/leagues/${leagueId}`).then(response => response.json()).then(details => console.log(details))
-    }
+    outputData(leagueId,itemId)
 }
    
-// it is all sorted, i just have to find a way to just go through and think about how to access the standings and show them !! thats it 
+function outputData(leagueId,itemId){
+    if(itemId == leagueId){
+        fetch(`${defaultUrl}/${leagueId}/standings?season=2023&sort=asc`).then(response => response.json())
+        .then(details => console.log(details))
+    }
+}
+
+// now here i have all the data for showing it initially 
+// next step is to show the inital data to frontend 
+// after that we need to setup the season thingy so yeah

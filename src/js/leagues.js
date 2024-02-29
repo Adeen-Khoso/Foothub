@@ -1,9 +1,10 @@
 // initializing variables
 let leaguesTable = document.getElementById('leagues-table');
 let itemContainer = document.getElementById('item-container');
+const defaultUrl = "https://api-football-standings.azharimm.dev/leagues";
 
 // fetching details from the api
-fetch('https://api-football-standings.azharimm.dev/leagues')
+fetch(defaultUrl)
 .then(response => response.json())
 .then(details => details.data.forEach(element => {
     createItem(element.logos.light,element.name,element.abbr,element.id)
