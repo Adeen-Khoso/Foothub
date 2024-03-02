@@ -752,6 +752,10 @@ video {
   height: 100vh;
 }
 
+.w-10{
+  width: 2.5rem;
+}
+
 .w-16{
   width: 4rem;
 }
@@ -792,10 +796,6 @@ video {
   width: 11rem;
 }
 
-.w-5{
-  width: 1.25rem;
-}
-
 .w-56{
   width: 14rem;
 }
@@ -822,6 +822,10 @@ video {
 
 .w-screen{
   width: 100vw;
+}
+
+.w-5{
+  width: 1.25rem;
 }
 
 .cursor-pointer{
@@ -998,11 +1002,6 @@ video {
      object-fit: cover;
 }
 
-.px-1{
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
-}
-
 .px-12{
   padding-left: 3rem;
   padding-right: 3rem;
@@ -1051,11 +1050,6 @@ video {
 .py-5{
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
-}
-
-.px-20{
-  padding-left: 5rem;
-  padding-right: 5rem;
 }
 
 .pb-10{
@@ -1500,8 +1494,8 @@ video {
     width: 14rem;
   }
 
-  .sm\:w-7{
-    width: 1.75rem;
+  .sm\:w-8{
+    width: 2rem;
   }
 
   .sm\:w-80{
@@ -1512,12 +1506,8 @@ video {
     width: auto;
   }
 
-  .sm\:w-52{
-    width: 13rem;
-  }
-
-  .sm\:w-96{
-    width: 24rem;
+  .sm\:w-7{
+    width: 1.75rem;
   }
 
   .sm\:flex-row{
@@ -1556,10 +1546,6 @@ video {
     gap: 2.5rem;
   }
 
-  .sm\:gap-12{
-    gap: 3rem;
-  }
-
   .sm\:gap-14{
     gap: 3.5rem;
   }
@@ -1570,10 +1556,6 @@ video {
 
   .sm\:gap-2{
     gap: 0.5rem;
-  }
-
-  .sm\:gap-20{
-    gap: 5rem;
   }
 
   .sm\:gap-3{
@@ -1596,8 +1578,12 @@ video {
     gap: 2.25rem;
   }
 
-  .sm\:gap-0{
-    gap: 0px;
+  .sm\:gap-12{
+    gap: 3rem;
+  }
+
+  .sm\:gap-20{
+    gap: 5rem;
   }
 
   .sm\:self-center{
@@ -1612,14 +1598,14 @@ video {
     background-position: center;
   }
 
+  .sm\:px-14{
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+
   .sm\:px-16{
     padding-left: 4rem;
     padding-right: 4rem;
-  }
-
-  .sm\:px-2{
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
   }
 
   .sm\:px-28{
@@ -1650,11 +1636,6 @@ video {
   .sm\:py-6{
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-  }
-
-  .sm\:px-14{
-    padding-left: 3.5rem;
-    padding-right: 3.5rem;
   }
 
   .sm\:pb-10{
@@ -1707,14 +1688,14 @@ video {
     line-height: 1.75rem;
   }
 
-  .sm\:text-xl{
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-
   .sm\:text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .sm\:text-xl{
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .sm\:leading-normal{

@@ -9,62 +9,64 @@ dropdown.addEventListener('click', ()=>{
 // initializing elements
 const heading = document.getElementById('heading');
 const itemContainer = document.getElementById('item-container');
-// let width = screen.width;
 
 // default_url/parent_url
 const defaultUrl = "https://api-football-standings.azharimm.dev/leagues";
 const itemId = location.search.split("=")[1];
 
-fetch(defaultUrl).then(response => response.json())
-.then(details => leagueId = details.data.forEach(element => {
-    gettingId(element.id)
-}))
-
-function gettingId(id){
-    const leagueId = id;
-    outputData(leagueId,itemId)
-}
-
+let season = 2023;
 let abbr;
 
-function outputData(leagueId,itemId){
-    if(itemId == leagueId){
-        fetch(`${defaultUrl}/${leagueId}/standings?season=2023&sort=asc`).then(response => response.json())
-        .then((details) => {
+outputData(itemId)
+
+function outputData(itemId){
+    fetch(`${defaultUrl}/${itemId}/standings?season=${season}&sort=asc`).then(response => response.json())
+    .then((details) => {
+        let currSeason = details.data.season;
+
+        console.log(currSeason)
+        
+        setTableHeading(details.data.abbreviation, currSeason)
+        
+        let teamName ;
+        
+        details.data.standings.forEach(element => {
             
-            setTableHeading(details.data.abbreviation, details.data.season)
-            console.log(details.data)
-
-            let teamName ;
-            
-            details.data.standings.forEach(element => {
-
-                // for responsiveness
-                let displayName = element.team.displayName;
-                let abbr = element.team.abbreviation;
-
-                function nameCheck(name,abbr){
-                    if(screen.width > 700){
-                        teamName = name;
-                    }else{
-                        teamName = abbr;
-                    }
+            // for responsiveness
+            let displayName = element.team.displayName;
+            let abbr = element.team.abbreviation;
+        
+            function nameCheck(name,abbr){
+                if(screen.width > 700){
+                    teamName = name;
+                }else{
+                    teamName = abbr;
                 }
-                nameCheck(displayName,abbr)
-                
-                setItem(
-                    element.stats[10].displayValue,
-                    teamName,
-                    element.stats[0].value,
-                    element.stats[7].value,
-                    element.stats[1].value,
-                    element.stats[6].value,
-                    element.stats[3].value,
-                    element.team.logos[0].href
-                );
-            });
-        })
-    }
+            }
+            nameCheck(displayName,abbr)
+
+            setItem(
+                element.stats[10].displayValue,
+                teamName,
+                element.stats[0].value,
+                element.stats[7].value,
+                element.stats[1].value,
+                element.stats[6].value,
+                element.stats[3].value,
+                element.team.logos[0].href
+            );
+        });
+            
+        fetch(`${defaultUrl}/${itemId}/seasons`).then(response => response.json())
+        .then((details) => {
+            const allSeasons = details.data.seasons;
+
+            allSeasons.forEach((season) => {
+                setSeasons(season.year) 
+            })
+        });
+    })
+        
 }
 
 function setTableHeading(abbr,season){
@@ -87,7 +89,7 @@ function setItem(rank, name, gamesPlayed, wins, loss, draws, points,logo){
         
         </div>
 
-        <div class="flex items-center gap-5 sm:gap-20 sm:flex-nowrap w-44 sm:w-auto">
+        <div class="flex items-center gap-5 sm:gap-12 sm:flex-nowrap w-44 sm:w-auto">
             <div class="font-poppins text-primary_dark text-xs sm:text-base">
                 GP <span class="font-poppins font-semibold text-primary_light">${gamesPlayed}</span> 
             </div>
@@ -106,9 +108,29 @@ function setItem(rank, name, gamesPlayed, wins, loss, draws, points,logo){
         </div>
     `;
     itemContainer.appendChild(item);
+
 }
 
+function setSeasons(year){
+    let item = document.createElement('p');
+    item.innerHTML = `${year}/${year+1}`
+    item.classList.add('cursor-pointer');
+    dropdownDiv.appendChild(item);
 
-// now here i have all the data for showing it initially 
-// next step is to show the inital data to frontend 
-// after that we need to setup the season thingy so yeah
+    item.onclick = function(){
+        season = year;
+        clearCurrentTable(itemContainer);
+        clearCurrentTable(dropdownDiv)
+        outputData(itemId)
+        dropdownDiv.classList.toggle('hidden');
+    }
+}
+
+function clearCurrentTable(parent){
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
+
+// refactored the code alot , removed unnecessary things like major if statment on main function so that it can be as refined as possible , tmrw morning just refactor, cmnt this off and then ui, documentation
+// the project is completed all the major things are done, just refactor and ui(animations,dropdown_styles)
