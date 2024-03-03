@@ -1,38 +1,34 @@
-// for dropdown menu
-const dropdown = document.getElementById('dropdown');
-const dropdownDiv = document.getElementById('dropdown-div');
-
-dropdown.addEventListener('click', ()=>{
-    dropdownDiv.classList.toggle('hidden');
-})
-
-// initializing elements
+// html parent elements
 const heading = document.getElementById('heading');
 const itemContainer = document.getElementById('item-container');
 
 // default_url/parent_url
 const defaultUrl = "https://api-football-standings.azharimm.dev/leagues";
+
+// getting url parameter
 const itemId = location.search.split("=")[1];
 
+// default season
 let season = 2023;
+
 let abbr;
 
 outputData(itemId)
 
+// main function : to output all the data
 function outputData(itemId){
     fetch(`${defaultUrl}/${itemId}/standings?season=${season}&sort=asc`).then(response => response.json())
     .then((details) => {
-        let currSeason = details.data.season;
 
-        console.log(currSeason)
+        // current season
+        let currSeason = details.data.season;        
         
         setTableHeading(details.data.abbreviation, currSeason)
         
+        // to set responsive team name 
         let teamName ;
-        
-        details.data.standings.forEach(element => {
-            
-            // for responsiveness
+        details.data.standings.forEach(element => {   
+
             let displayName = element.team.displayName;
             let abbr = element.team.abbreviation;
         
@@ -69,11 +65,13 @@ function outputData(itemId){
         
 }
 
+// for setting table data
 function setTableHeading(abbr,season){
     heading.innerHTML = abbr;
     dropdown.innerHTML = ` ${season}/${season+1} <span class="text-xs" id="dropdown-span">▼</span>`
 }
 
+// for setting team & data in table
 function setItem(rank, name, gamesPlayed, wins, loss, draws, points,logo){
     let item = document.createElement("div");
     item.classList.add("flex", "gap-7", "justify-between", "border-b-2" ,"border-b-light", "py-2" ,"px-1" ,"sm:px-2" ,"sm:gap-12");
@@ -111,6 +109,7 @@ function setItem(rank, name, gamesPlayed, wins, loss, draws, points,logo){
 
 }
 
+// for setting seasons in season dropdown 
 function setSeasons(year){
     let item = document.createElement('p');
     item.innerHTML = `${year}/${year+1}`
@@ -126,6 +125,7 @@ function setSeasons(year){
     }
 }
 
+// for clearing current table
 function clearCurrentTable(parent){
     while (parent.firstChild) {
         parent.removeChild(parent.firstChild);

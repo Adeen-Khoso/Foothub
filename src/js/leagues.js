@@ -12,12 +12,12 @@ fetch(defaultUrl)
     console.log(`${err} couldnt create and item here`)
 })
 
-// function creating a new item in league table
+// create item in league table
 function createItem(logoSrc,leagueName,leagueAbbr,leagueId){
     let item = document.createElement('div');
     item.innerHTML = `
 
-        <img src="${logoSrc}" alt="img" class="w-14 sm:w-14" style="width:60px;">
+        <img src="${logoSrc}" alt="img" class="w-12">
 
         <div class="flex flex-col justify-center items-start">
             <h1 class="font-poppins font-semibold text-primary_dark text-sm sm:text-2xl">${leagueName}</h1>
