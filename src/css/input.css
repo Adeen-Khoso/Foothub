@@ -42,7 +42,10 @@
   border-bottom-color:#91B0DA ;
 }
 .bg-lightest{
-  background-color: #A6BDDC;
+  background-color: #c1d3eb;
+}
+.bg-cold{
+  background-color: rgb(175, 202, 224);
 }
 .text-light-color{
   color: #758eb1e1;
@@ -52,6 +55,17 @@
 }
 .text-dull{
   color: rgba(166, 196, 216, 0.589);
+}
+.box-shadow{
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+.non-selectable {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, supported by most modern browsers */
 }
 
 /* height classes */
@@ -71,8 +85,13 @@
   height:50vh;
 }
 
+.border-light{
+  border-color: #91B0DA;
+}
 
-
+.scrollable-content::-webkit-scrollbar {
+  width: 0; /* Width of the scrollbar (set to 0 to hide) */
+}
 
 /* media query for bigger screens */
 @media only screen and (min-width: 1440px) {

@@ -113,7 +113,7 @@ function setItem(rank, name, gamesPlayed, wins, loss, draws, points,logo){
 function setSeasons(year){
     let item = document.createElement('p');
     item.innerHTML = `${year}/${year+1}`
-    item.classList.add('cursor-pointer');
+    item.classList.add('cursor-pointer',"border", "border-light", "px-4", "py-1" ,"rounded-lg","hover:bg-lightest");
     dropdownDiv.appendChild(item);
 
     item.onclick = function(){

@@ -17,7 +17,7 @@ function createItem(logoSrc,leagueName,leagueAbbr,leagueId){
     let item = document.createElement('div');
     item.innerHTML = `
 
-        <img src="${logoSrc}" alt="img" class="w-12">
+        <img src="${logoSrc}" alt="img" class="w-12"> 
 
         <div class="flex flex-col justify-center items-start">
             <h1 class="font-poppins font-semibold text-primary_dark text-sm sm:text-2xl">${leagueName}</h1>

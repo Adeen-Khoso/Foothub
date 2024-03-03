@@ -19,7 +19,7 @@ function menuFunc() {
 };
 
 window.addEventListener('scroll', function() {
-  if(width > 700){
+  if(width > 700){ 
     let scrolledValue = 70;
     let scrolled = window.scrollY > scrolledValue;
   

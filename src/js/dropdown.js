@@ -4,4 +4,8 @@ const dropdownDiv = document.getElementById('dropdown-div');
 
 dropdown.addEventListener('click', ()=>{
     dropdownDiv.classList.toggle('hidden');
+
+    if(!dropdown.classList.contains('hidden')){
+        dropdownDiv.classList.add('flex');
+    }
 })

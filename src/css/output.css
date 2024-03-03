@@ -752,6 +752,10 @@ video {
   height: 100vh;
 }
 
+.w-12{
+  width: 3rem;
+}
+
 .w-16{
   width: 4rem;
 }
@@ -822,18 +826,6 @@ video {
 
 .w-screen{
   width: 100vw;
-}
-
-.w-8{
-  width: 2rem;
-}
-
-.w-10{
-  width: 2.5rem;
-}
-
-.w-12{
-  width: 3rem;
 }
 
 .cursor-pointer{
@@ -956,6 +948,10 @@ video {
   border-radius: 1.5rem;
 }
 
+.rounded-lg{
+  border-radius: 0.5rem;
+}
+
 .rounded-md{
   border-radius: 0.375rem;
 }
@@ -969,8 +965,17 @@ video {
   border-bottom-left-radius: 0.75rem;
 }
 
+.border{
+  border-width: 1px;
+}
+
 .border-b-2{
   border-bottom-width: 2px;
+}
+
+.bg-lightest{
+  --tw-bg-opacity: 1;
+  background-color: rgb(193 211 235 / var(--tw-bg-opacity));
 }
 
 .bg-primary_bg{
@@ -1229,7 +1234,11 @@ video {
 }
 
 .bg-lightest{
-  background-color: #A6BDDC;
+  background-color: #c1d3eb;
+}
+
+.bg-cold{
+  background-color: rgb(175, 202, 224);
 }
 
 .text-light-color{
@@ -1242,6 +1251,23 @@ video {
 
 .text-dull{
   color: rgba(166, 196, 216, 0.589);
+}
+
+.box-shadow{
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+}
+
+.non-selectable {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, supported by most modern browsers */
 }
 
 /* height classes */
@@ -1264,6 +1290,15 @@ video {
 
 .fifty-percent-height{
   height:50vh;
+}
+
+.border-light{
+  border-color: #91B0DA;
+}
+
+.scrollable-content::-webkit-scrollbar {
+  width: 0;
+  /* Width of the scrollbar (set to 0 to hide) */
 }
 
 /* media query for bigger screens */
@@ -1378,6 +1413,11 @@ video {
   border-radius: 1rem;
 }
 
+.hover\:bg-lightest:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(193 211 235 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-primary_bg:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(221 230 237 / var(--tw-bg-opacity));
@@ -1478,6 +1518,10 @@ video {
     width: 91.666667%;
   }
 
+  .sm\:w-12{
+    width: 3rem;
+  }
+
   .sm\:w-2\/3{
     width: 66.666667%;
   }
@@ -1512,10 +1556,6 @@ video {
 
   .sm\:w-auto{
     width: auto;
-  }
-
-  .sm\:w-12{
-    width: 3rem;
   }
 
   .sm\:flex-row{

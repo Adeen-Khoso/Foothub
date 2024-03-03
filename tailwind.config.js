@@ -8,6 +8,7 @@ module.exports = {
       primary_light:'#3B5271',
       secondary_color:'91B0DA',
       primary_bg:'#DDE6ED',
+      lightest:'#c1d3eb',
       hover_text_color:'color: rgb(148 163 184);'
     },
     extend: {
