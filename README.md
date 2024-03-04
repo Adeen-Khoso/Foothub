@@ -16,6 +16,5 @@ Foothub is built using the following technologies:
 - **Tailwind CSS:** Utilized for efficient and responsive styling, ensuring a visually appealing design.
 - **Vanilla JavaScript:** Employed for interactive features and dynamic content updates.
 
-## How to Use
-
-1. **Clone the Repository:**
+## Visit Here : 
+- https://foothub.netlify.app
